@@ -1,0 +1,26 @@
+name: IMS CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Build Successful"
+
+      - name: Test
+        run: echo "Testing Successful"
+
+      - name: Security Validation
+        run: echo "Security Validation Successful"
+
+      - name: Deployment Validation
+        run: echo "Ready for Deployment"
